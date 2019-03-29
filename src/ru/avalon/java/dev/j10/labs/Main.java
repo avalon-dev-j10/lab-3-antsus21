@@ -64,7 +64,7 @@ public class Main {
         
         System.out.println("\nСортировка выбором: ");
 	for (int c: selectArr){
-	System.out.print(c + " ");
+            System.out.print(c + " ");
 	}
         System.out.println("\n----------------------------------------------------------------------------------------------------");
         
@@ -84,7 +84,7 @@ public class Main {
         
         System.out.println("\nСортировка выбором: ");
 	for (int c: shellArr){
-	System.out.print(c + " ");
+            System.out.print(c + " ");
 	}
         System.out.println("\n----------------------------------------------------------------------------------------------------");
 

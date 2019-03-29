@@ -27,6 +27,14 @@ public class FibonacciInitializer implements Initializer {
      * @param array массив, подлежащий инициализации
      */
     public void initialize(int[] array) {
+        
+        /*  TODO (Проверка№1 ЛР№3)
+            - Перед каждым обращением к элементу массива надо проверять есть ли такой индекс
+            length() > 0, если я в метод передам массив array = null возникнет ошибка выполнения
+            - Исправить ошибку RunTime!!!!
+            - Добавить комментарии к полям и методам класса!
+        */
+        
         array [0] = 0;
         array [1] = 1;
         for (int i = 2; i< array.length;i++){

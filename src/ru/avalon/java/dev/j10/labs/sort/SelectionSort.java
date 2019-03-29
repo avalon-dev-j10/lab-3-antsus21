@@ -14,9 +14,13 @@ import ru.avalon.java.dev.j10.labs.Sort;
  */
 public class SelectionSort implements Sort {
 
-    /**
-     * {@inheritDoc}
-     */
+    /*  TODO (Проверка№1 ЛР№3)
+            - Перед обращением к массиву следует делать проверку на правильность массива,
+            если array = null, возникает ошибка!!!
+            - Исправить!
+            - Добавить комментарии к полям и методам класса
+    */
+    
     public void sort(int[] array) {
         int min; 
         int tmp; 
