@@ -15,12 +15,13 @@ import ru.avalon.java.dev.j10.labs.Initializer;
  */
 public class RandomInitializer implements Initializer {
     
-    int min;
+    int min; 
     int max;
     
-    public RandomInitializer(int min, int max) {
-        this.min = min;
-        this.max = max;
+    
+    public RandomInitializer(int min, int max) { // конструктор
+        this.min = min;         //инициализация пременных
+        this.max = max;         //мах и min
     }
 
     /**
@@ -29,11 +30,13 @@ public class RandomInitializer implements Initializer {
      *
      * @param array массив, подлежащий инициализации
      */
+    
+    //Инициализация массива рандомными значениями
     public void initialize(int[] array) {
         
-        if (array!=null){                                           // проверяем на значение null, если array не равен null, выполняется цикл
-            for (int i=0; i <array.length; i++) {                   // делает проход по всем элементам
-                array [i] = (int)(Math.random()*(max - min+1)-max); // инициализация
+        if (array!=null){                                           
+            for (int i=0; i <array.length; i++) {                   
+                array [i] = (int)(Math.random()*(max - min+1)-max); 
             }
         }
         /*  TODO (Проверка№1 ЛР№3)

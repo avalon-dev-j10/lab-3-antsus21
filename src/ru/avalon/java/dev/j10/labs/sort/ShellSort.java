@@ -23,8 +23,8 @@ public class ShellSort implements Sort {
     public void sort(int[] array) {
         
         if (array != null){    // проверка
-        int tmp;               // инициализация 
-        int h = 0;             // переменных
+        int tmp;               // инициализация переменных 
+        int h = 0;             // tmp и h
         
         /*  TODO (Проверка№1 ЛР№3)
             - Перед обращением к массиву следует делать проверку на правильность массива,
@@ -32,16 +32,16 @@ public class ShellSort implements Sort {
             - Исправить!
             - Добавить комментарии к полям и методам класса
         */
-        
-            while (h <= array.length/3)                     // определяем мах значение h - расстояния между элементами 
-                h = 3*h +1;                                 //
-            for (int k = h; k > 0; k = (k-1)/3) {           // внешний цикл, начина я со значения k = h
-                for (int i = k; i < array.length; i++){     // вложенный цикл, проходит с шагом, равным k
-                    tmp = array[i];                         // находит эл. с наименьш. значением
-                    int j;                                  // и 
-                    for ( j = i; j >=k; j = j-k){           // обменивает его
-                        if (tmp < array[j-k])               //с еще не отсортиров.
-                            array[j] = array [j - k];       //
+        // Реализация сортировки Шелла
+            while (h <= array.length/3)                     
+                h = 3*h +1;                                 
+            for (int k = h; k > 0; k = (k-1)/3) {           
+                for (int i = k; i < array.length; i++){     
+                    tmp = array[i];                         
+                    int j;                                  
+                    for ( j = i; j >=k; j = j-k){           
+                        if (tmp < array[j-k])               
+                            array[j] = array [j - k];       
                         else 
                             break;}
                 

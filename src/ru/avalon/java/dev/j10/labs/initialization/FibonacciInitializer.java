@@ -26,6 +26,8 @@ public class FibonacciInitializer implements Initializer {
      *
      * @param array массив, подлежащий инициализации
      */
+    
+    // Генерация последовательности Фибоначчи с помощью метода initialize
     public void initialize(int[] array) {
         
         /*  TODO (Проверка№1 ЛР№3)
@@ -35,11 +37,11 @@ public class FibonacciInitializer implements Initializer {
             - Добавить комментарии к полям и методам класса!
         */
         
-        if (array!= null){                              // проверяем на значение null, если array не равен null, выполняется цикл
+        if (array!= null){                              
             array [0] = 0;                              // инициализация 1 элемента значением 0
             array [1] = 1;                              // инициализация 2 элемента значением 1
-            for (int i = 2; i< array.length;i++){       // инициализация всех остальных элементов,
-                array[i] = array[i-1] + array [i-2];    // каждый из которых равен сумме 2х предыдущих
+            for (int i = 2; i< array.length;i++){       
+                array[i] = array[i-1] + array [i-2];    
             }
         }
         /*

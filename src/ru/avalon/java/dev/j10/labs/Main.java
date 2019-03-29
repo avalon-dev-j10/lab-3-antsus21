@@ -6,6 +6,8 @@ import ru.avalon.java.dev.j10.labs.sort.*;
 public class Main {
 
     public static void main(String[] args) {
+        
+        // Последовательность Фибоначчи
         int[] array = new int[20];
         FibonacciInitializer fib = new FibonacciInitializer();
         fib.initialize(array);
@@ -24,7 +26,7 @@ public class Main {
         System.out.println("----------------------------------------------------------------------------------------------------");
         
         //--------------------------------------------------------------------------------------------------------------------------
-        
+        //Пузырьковая сортировка
         RandomInitializer rnd = new RandomInitializer(-50, 50);
         rnd.initialize(array);
         
@@ -49,7 +51,7 @@ public class Main {
         
         
         //----------------------------------------------------------------------------------------------------------------------------
-        
+        // Сортировка выбором
         int[] selectArr = new int[20];
 	rnd.initialize(selectArr); 
         
@@ -69,7 +71,7 @@ public class Main {
         System.out.println("\n----------------------------------------------------------------------------------------------------");
         
         //----------------------------------------------------------------------------------------------------------------------------
-        
+        // Сортировка Шелла
         int[] shellArr = new int[20];
 	rnd.initialize(shellArr); 
         
