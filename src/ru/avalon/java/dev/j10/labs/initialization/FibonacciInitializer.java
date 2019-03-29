@@ -35,10 +35,12 @@ public class FibonacciInitializer implements Initializer {
             - Добавить комментарии к полям и методам класса!
         */
         
-        array [0] = 0;
-        array [1] = 1;
-        for (int i = 2; i< array.length;i++){
-            array[i] = array[i-1] + array [i-2];
+        if (array!= null){                              // проверяем на значение null, если array не равен null, выполняется цикл
+            array [0] = 0;                              // инициализация 1 элемента значением 0
+            array [1] = 1;                              // инициализация 2 элемента значением 1
+            for (int i = 2; i< array.length;i++){       // инициализация всех остальных элементов,
+                array[i] = array[i-1] + array [i-2];    // каждый из которых равен сумме 2х предыдущих
+            }
         }
         /*
          * TODO(Студент): Реализовать метод initialize класса FibonacciInitializer

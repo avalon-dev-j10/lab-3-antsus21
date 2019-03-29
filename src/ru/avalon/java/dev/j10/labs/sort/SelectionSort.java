@@ -22,18 +22,21 @@ public class SelectionSort implements Sort {
     */
     
     public void sort(int[] array) {
-        int min; 
-        int tmp; 
-        for (int i = 0; i < array.length - 1; i ++){
-            min = i;
-            for (int j = i+1; j < array.length; j++){
-                if (array[j] < array[min])
-                    min = j;
+         
+        if (array != null){                                 // проверка
+            int min;                                        // мин значение
+            int tmp;                                        // промежуточная переменная
+            for (int i = 0; i < array.length - 1; i ++){    // проход по всем элементам
+                min = i;                                    // индекс с мин значением
+                for (int j = i+1; j < array.length; j++){   // проход цикла
+                    if (array[j] < array[min])
+                        min = j;
                  
-                tmp = array[min];
-                array[min] = array[i];
-                array [i] = tmp;
+                    tmp = array[min];                       //обмен значениями
+                    array[min] = array[i];
+                    array [i] = tmp;
                           
+                }
             }
         }
         /*

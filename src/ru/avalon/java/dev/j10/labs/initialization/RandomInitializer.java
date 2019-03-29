@@ -30,10 +30,12 @@ public class RandomInitializer implements Initializer {
      * @param array массив, подлежащий инициализации
      */
     public void initialize(int[] array) {
-        for (int i=0; i <array.length; i++) {
-            array [i] = (int)(Math.random()*(max - min+1)-max);
-        }
         
+        if (array!=null){                                           // проверяем на значение null, если array не равен null, выполняется цикл
+            for (int i=0; i <array.length; i++) {                   // делает проход по всем элементам
+                array [i] = (int)(Math.random()*(max - min+1)-max); // инициализация
+            }
+        }
         /*  TODO (Проверка№1 ЛР№3)
         - Перед обращением к массиву следует делать проверку на правильность массива,
         если array = null, возникает ошибка!!!

@@ -20,16 +20,18 @@ public class BubbleSort implements Sort {
             - Добавить комментарии к полям и методам класса
     */
     
-    public void sort(int[] array) {
+    public void sort(int[] array) {                                     
         
-        for (int i = 0; i < array.length - 1; i++) 
-	for (int j = 0; j < array.length-i-1; j++) 
-            if (array[j] > array[j+1]) 
-	{                    
-	 int tmp = array[j]; 
-	 array[j] = array[j+1]; 
-	 array[j+1] = tmp;
-	}
+            if (array!= null) {                                             // (проверка на значение null
+            for (int i = 0; i < array.length - 1; i++)                      //  обходим все элементы массива, кроме последнего
+            for (int j = 0; j < array.length-i-1; j++)                      //  с каждой новой итеррацией цикла снова обхоит все элементы, исключая последний, так как он уже отсортирован и т.д.
+                if (array[j] > array[j+1])                                  // если j > j+1, то меняем их местами
+                {                    
+                int tmp = array[j];                                         //  задаем промежуточную переменную tmp, для того,
+                array[j] = array[j+1];                                      //  чтобы поменять местами
+                array[j+1] = tmp;                                           //  элементы j и j+1
+                }
+        }
         /*
          * TODO(Студент): Реализовать метод sort класса BubbleSort
          */
