@@ -33,20 +33,19 @@ public class ShellSort implements Sort {
             - Добавить комментарии к полям и методам класса
         */
         // Реализация сортировки Шелла
-            while (h <= array.length/3)                     
-                h = 3*h +1;                                 
-            for (int k = h; k > 0; k = (k-1)/3) {           
+            while (h <= array.length / 3)                     
+                h = 3 * h +1;                                 
+            for (int k = h; k > 0; k = (k - 1) / 3) {           
                 for (int i = k; i < array.length; i++){     
                     tmp = array[i];                         
                     int j;                                  
-                    for ( j = i; j >=k; j = j-k){           
+                    for ( j = i; j >= k; j = j - k){           
                         if (tmp < array[j-k])               
                             array[j] = array [j - k];       
                         else 
                             break;}
                 
                     array[j] = tmp;
-                  
                 }
             }
         }
