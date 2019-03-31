@@ -34,7 +34,7 @@ public class RandomInitializer implements Initializer {
     //Инициализация массива рандомными значениями
     public void initialize(int[] array) {
         
-        if (array!=null){                                           
+        if (array != null || array.length > 0){                                           
             for (int i=0; i <array.length; i++) {                   
                 array [i] = (int)(Math.random()*(max - min+1)-max); 
             }

@@ -37,10 +37,16 @@ public class FibonacciInitializer implements Initializer {
             - Добавить комментарии к полям и методам класса!
         */
         
-        if (array!= null){                              
-            array [0] = 0;                              // инициализация 1 элемента значением 0
-            array [1] = 1;                              // инициализация 2 элемента значением 1
-            for (int i = 2; i< array.length;i++){       
+        if (array != null || array.length > 0){                              
+            for (int i = 0; i< array.length;i++){ 
+                if(i==0){                               
+                    array[i] = 0;
+                    continue;
+                }
+                if(i==1){                               
+                    array[i] = 1;
+                    continue;
+                }
                 array[i] = array[i-1] + array [i-2];    
             }
         }

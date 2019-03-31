@@ -22,7 +22,7 @@ public class ShellSort implements Sort {
      */
     public void sort(int[] array) {
         
-        if (array != null){    // проверка
+        if (array != null || array.length > 0){    // проверка
         int tmp;               // инициализация переменных 
         int h = 0;             // tmp и h
         

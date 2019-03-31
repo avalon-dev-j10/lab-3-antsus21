@@ -23,7 +23,7 @@ public class SelectionSort implements Sort {
     // реализация сортировки выбором
     public void sort(int[] array) {
          
-        if (array != null){                                 
+        if (array != null || array.length > 0){                                 
             int min;                                        
             int tmp;                                        
             for (int i = 0; i < array.length - 1; i ++){    
