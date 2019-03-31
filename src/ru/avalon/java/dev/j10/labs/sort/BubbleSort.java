@@ -31,6 +31,7 @@ public class BubbleSort implements Sort {
                 1, 2, 3, .. т.е. > 0 
                 Раз ты в цикле for используешь i < array.length ...  
                 то for при работе с массивом не даст выйти запределы массива
+                - То же самое касается и остальных методов сортировки, Фибоначи, Рандом!
             */
             for (int i = 0; i < array.length - 1; i++)                      
                 for (int j = 0; j < array.length - i - 1; j++)                      
