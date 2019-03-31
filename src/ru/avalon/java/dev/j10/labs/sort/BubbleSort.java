@@ -23,15 +23,22 @@ public class BubbleSort implements Sort {
     // Реализация пузырьковой сортировки
     public void sort(int[] array) {                                     
         
-            if (array!= null || array.length > 0) {                                             
+        if (array!= null || array.length > 0) {
+            /*  TODO (Проверка№3 ЛР№3)
+                - В данном случае делать проверку array.length > 0
+                бессмысленно, ты уже проверил что array!= null
+                это означает что массив уже инициализирован и имеет какую-то длину
+                1, 2, 3, .. т.е. > 0 
+                Раз ты в цикле for используешь i < array.length ...  
+                то for при работе с массивом не даст выйти запределы массива
+            */
             for (int i = 0; i < array.length - 1; i++)                      
-            for (int j = 0; j < array.length-i-1; j++)                      
-                if (array[j] > array[j + 1])                                  
-                {                    
-                int tmp = array[j];                                         
-                array[j] = array[j + 1];                                      
-                array[j + 1] = tmp;                                           
-                }
+                for (int j = 0; j < array.length - i - 1; j++)                      
+                    if (array[j] > array[j + 1]) {                    
+                        int tmp = array[j];                                         
+                        array[j] = array[j + 1];                                      
+                        array[j + 1] = tmp;                                           
+                    }
         }
         /*
          * TODO(Студент): Реализовать метод sort класса BubbleSort

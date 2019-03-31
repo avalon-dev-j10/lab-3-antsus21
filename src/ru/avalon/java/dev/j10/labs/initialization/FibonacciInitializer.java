@@ -38,16 +38,16 @@ public class FibonacciInitializer implements Initializer {
         */
         
         if (array != null || array.length > 0){                              
-            for (int i = 0; i< array.length;i++){ 
-                if(i==0){                               
+            for (int i = 0; i< array.length; i++) { 
+                if(i == 0){                               
                     array[i] = 0;
                     continue;
                 }
-                if(i==1){                               
+                if(i == 1){                               
                     array[i] = 1;
                     continue;
                 }
-                array[i] = array[i-1] + array [i-2];    
+                array[i] = array[i - 1] + array [i - 2];    
             }
         }
         /*
