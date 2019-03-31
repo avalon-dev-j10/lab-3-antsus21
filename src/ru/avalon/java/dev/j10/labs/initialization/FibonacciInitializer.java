@@ -47,5 +47,11 @@ public class FibonacciInitializer implements Initializer {
         /*
          * TODO(Студент): Реализовать метод initialize класса FibonacciInitializer
          */
+        
+        /*  TODO (Проверка№2 ЛР№3)
+            - Перед каждым обращением к элементу массива надо проверять есть ли такой индекс
+            если я в метод передам массив array[0], то при array[1] = 1; возникнет ошибка выполнения
+            Исправить ошибку RunTime!!!!
+        */
     }
 }
